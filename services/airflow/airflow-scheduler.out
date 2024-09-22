@@ -1,0 +1,587 @@
+[[34m2024-09-22T23:39:43.039+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:39:41.910728+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:39:43.041+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG data_prepare_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:39:43.041+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:39:41.910728+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:39:43.051+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task prepare_data_task because previous state change time has not been saved[0m
+[[34m2024-09-22T23:39:43.051+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:39:41.910728+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-09-22T23:39:43.052+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:39:41.910728+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:39:43.059+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:39:41.910728+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:39:43.738+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/dataset_dag.py[0m
+[[34m2024-09-22T23:39:43.980+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:39:43.982+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:39:44.142+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:39:44.158+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:39:44.158+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=data_prepare_dag/run_id=manual__2024-09-22T20:39:41.910728+00:00/task_id=prepare_data_task permission to 509
+[[34m2024-09-22T23:39:44.690+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:39:41.910728+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:39:55.607+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:39:41.910728+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:39:55.611+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=data_prepare_dag, task_id=prepare_data_task, run_id=manual__2024-09-22T20:39:41.910728+00:00, map_index=-1, run_start_date=2024-09-22 20:39:44.738360+00:00, run_end_date=2024-09-22 20:39:55.177706+00:00, run_duration=10.439346, state=success, executor_state=success, try_number=1, max_tries=0, job_id=11, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-09-22 20:39:43.041679+00:00, queued_by_job_id=1, pid=337142[0m
+[[34m2024-09-22T23:39:55.770+0300[0m] {[34mdagrun.py:[0m653} INFO[0m - Marking run <DagRun data_prepare_dag @ 2024-09-22 20:39:41.910728+00:00: manual__2024-09-22T20:39:41.910728+00:00, state:running, queued_at: 2024-09-22 20:39:41.919463+00:00. externally triggered: True> successful[0m
+[[34m2024-09-22T23:39:55.770+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=data_prepare_dag, execution_date=2024-09-22 20:39:41.910728+00:00, run_id=manual__2024-09-22T20:39:41.910728+00:00, run_start_date=2024-09-22 20:39:42.988127+00:00, run_end_date=2024-09-22 20:39:55.770695+00:00, run_duration=12.782568, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:39:41.910728+00:00, data_interval_end=2024-09-22 20:39:41.910728+00:00, dag_hash=be8f8d84ad6eeb3ef1cb202458955e60[0m
+[[34m2024-09-22T23:40:53.813+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:40:52.213559+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:40:53.814+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:40:53.814+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:40:52.213559+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:40:53.815+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task datasets_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:40:53.815+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:40:52.213559+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default[0m
+[[34m2024-09-22T23:40:53.815+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:40:52.213559+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:40:53.822+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:40:52.213559+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:40:54.523+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:40:54.816+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:40:54.819+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:40:54.980+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:40:54.993+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:40:54.993+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:40:52.213559+00:00/task_id=datasets_pipeline permission to 509
+[[34m2024-09-22T23:40:55.468+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:40:52.213559+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:40:56.123+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:40:52.213559+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:40:56.127+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=datasets_pipeline, run_id=manual__2024-09-22T20:40:52.213559+00:00, map_index=-1, run_start_date=2024-09-22 20:40:55.511442+00:00, run_end_date=2024-09-22 20:40:55.662806+00:00, run_duration=0.151364, state=success, executor_state=success, try_number=1, max_tries=0, job_id=12, pool=default_pool, queue=default, priority_weight=4, operator=TriggerDagRunOperator, queued_dttm=2024-09-22 20:40:53.814484+00:00, queued_by_job_id=1, pid=337291[0m
+[[34m2024-09-22T23:40:56.298+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.wait_for_datasets_pipeline manual__2024-09-22T20:40:52.213559+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:40:55.615185+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:40:56.298+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:40:56.298+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG data_prepare_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:40:56.298+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.wait_for_datasets_pipeline manual__2024-09-22T20:40:52.213559+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:40:55.615185+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:40:56.300+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task wait_for_datasets_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:40:56.300+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task prepare_data_task because previous state change time has not been saved[0m
+[[34m2024-09-22T23:40:56.301+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='wait_for_datasets_pipeline', run_id='manual__2024-09-22T20:40:52.213559+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-09-22T23:40:56.301+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'wait_for_datasets_pipeline', 'manual__2024-09-22T20:40:52.213559+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:40:56.301+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:40:55.615185+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-09-22T23:40:56.301+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:40:55.615185+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:40:56.308+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'wait_for_datasets_pipeline', 'manual__2024-09-22T20:40:52.213559+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:40:56.931+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:40:57.150+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:40:57.152+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:40:57.294+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:40:57.306+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:40:57.307+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:40:52.213559+00:00/task_id=wait_for_datasets_pipeline permission to 509
+[[34m2024-09-22T23:40:57.721+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.wait_for_datasets_pipeline manual__2024-09-22T20:40:52.213559+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:43:18.923+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:40:55.615185+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:43:19.544+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/dataset_dag.py[0m
+[[34m2024-09-22T23:43:19.756+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:19.757+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:43:19.896+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:19.907+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:43:19.907+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=data_prepare_dag/run_id=manual__2024-09-22T20:40:55.615185+00:00/task_id=prepare_data_task permission to 509
+[[34m2024-09-22T23:43:20.314+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:40:55.615185+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:43:31.670+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='wait_for_datasets_pipeline', run_id='manual__2024-09-22T20:40:52.213559+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:43:31.671+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:40:55.615185+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:43:31.676+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=data_prepare_dag, task_id=prepare_data_task, run_id=manual__2024-09-22T20:40:55.615185+00:00, map_index=-1, run_start_date=2024-09-22 20:43:20.361397+00:00, run_end_date=2024-09-22 20:43:31.205513+00:00, run_duration=10.844116, state=success, executor_state=success, try_number=1, max_tries=0, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-09-22 20:40:56.298976+00:00, queued_by_job_id=1, pid=337357[0m
+[[34m2024-09-22T23:43:31.676+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=wait_for_datasets_pipeline, run_id=manual__2024-09-22T20:40:52.213559+00:00, map_index=-1, run_start_date=2024-09-22 20:40:57.764714+00:00, run_end_date=2024-09-22 20:43:09.055057+00:00, run_duration=131.290343, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=13, pool=default_pool, queue=default, priority_weight=3, operator=ExternalTaskSensor, queued_dttm=2024-09-22 20:40:56.298976+00:00, queued_by_job_id=1, pid=337311[0m
+[[34m2024-09-22T23:43:31.687+0300[0m] {[34mmanager.py:[0m302} ERROR[0m - DagFileProcessorManager (PID=336538) last sent a heartbeat 155.43 seconds ago! Restarting it[0m
+[[34m2024-09-22T23:43:31.691+0300[0m] {[34mprocess_utils.py:[0m131} INFO[0m - Sending 15 to group 336538. PIDs of all processes in the group: [336538][0m
+[[34m2024-09-22T23:43:31.691+0300[0m] {[34mprocess_utils.py:[0m86} INFO[0m - Sending the signal 15 to group 336538[0m
+[[34m2024-09-22T23:43:31.824+0300[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=336538, status='terminated', exitcode=0, started='23:37:20') (336538) terminated with exit code 0[0m
+[[34m2024-09-22T23:43:31.831+0300[0m] {[34mmanager.py:[0m166} INFO[0m - Launched DagFileProcessorManager with pid: 337417[0m
+[[34m2024-09-22T23:43:31.839+0300[0m] {[34msettings.py:[0m61} INFO[0m - Configured default timezone Timezone('UTC')[0m
+[2024-09-22T23:43:31.867+0300] {manager.py:410} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2024-09-22T23:43:31.899+0300[0m] {[34mscheduler_job_runner.py:[0m1605} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-09-22T23:43:31.902+0300[0m] {[34mscheduler_job_runner.py:[0m1628} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[[34m2024-09-22T23:43:32.186+0300[0m] {[34mdagrun.py:[0m743} ERROR[0m - Failed to get task for ti <TaskInstance: automated_pipeline_dag.wait_for_datasets_pipeline manual__2024-09-22T20:43:22.300796+00:00 [None]>. Marking it as removed.[0m
+[[34m2024-09-22T23:43:32.196+0300[0m] {[34mdagrun.py:[0m653} INFO[0m - Marking run <DagRun data_prepare_dag @ 2024-09-22 20:40:55.615185+00:00: manual__2024-09-22T20:40:55.615185+00:00, state:running, queued_at: 2024-09-22 20:40:55.624606+00:00. externally triggered: True> successful[0m
+[[34m2024-09-22T23:43:32.196+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=data_prepare_dag, execution_date=2024-09-22 20:40:55.615185+00:00, run_id=manual__2024-09-22T20:40:55.615185+00:00, run_start_date=2024-09-22 20:40:56.263494+00:00, run_end_date=2024-09-22 20:43:32.196454+00:00, run_duration=155.93296, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:40:55.615185+00:00, data_interval_end=2024-09-22 20:40:55.615185+00:00, dag_hash=be8f8d84ad6eeb3ef1cb202458955e60[0m
+[[34m2024-09-22T23:43:32.201+0300[0m] {[34mdagrun.py:[0m743} ERROR[0m - Failed to get task for ti <TaskInstance: automated_pipeline_dag.wait_for_datasets_pipeline manual__2024-09-22T20:40:52.213559+00:00 [failed]>. Marking it as removed.[0m
+[[34m2024-09-22T23:43:32.222+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:43:22.300796+00:00 [scheduled]>
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:40:52.213559+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:43:32.222+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:43:32.222+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 1/16 running and queued tasks[0m
+[[34m2024-09-22T23:43:32.222+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:43:22.300796+00:00 [scheduled]>
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:40:52.213559+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:43:32.224+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task datasets_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:43:32.225+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task models_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:43:32.225+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:43:22.300796+00:00', try_number=1, map_index=-1) to executor with priority 4 and queue default[0m
+[[34m2024-09-22T23:43:32.225+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:43:22.300796+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:43:32.226+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:40:52.213559+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-09-22T23:43:32.226+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:40:52.213559+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:43:32.233+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:43:22.300796+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:43:32.966+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:43:33.187+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:33.188+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:43:33.334+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:33.346+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:43:33.346+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:43:22.300796+00:00/task_id=datasets_pipeline permission to 509
+[[34m2024-09-22T23:43:33.792+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:43:22.300796+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:43:34.468+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:40:52.213559+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:43:35.109+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:43:35.328+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:35.329+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:43:35.468+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:35.479+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:43:35.480+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:40:52.213559+00:00/task_id=models_pipeline permission to 509
+[[34m2024-09-22T23:43:35.897+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:40:52.213559+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:43:36.554+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:43:22.300796+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:43:36.555+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:40:52.213559+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:43:36.559+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=models_pipeline, run_id=manual__2024-09-22T20:40:52.213559+00:00, map_index=-1, run_start_date=2024-09-22 20:43:35.942384+00:00, run_end_date=2024-09-22 20:43:36.089394+00:00, run_duration=0.14701, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=16, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-09-22 20:43:32.223346+00:00, queued_by_job_id=1, pid=337454[0m
+[[34m2024-09-22T23:43:36.559+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=datasets_pipeline, run_id=manual__2024-09-22T20:43:22.300796+00:00, map_index=-1, run_start_date=2024-09-22 20:43:33.834466+00:00, run_end_date=2024-09-22 20:43:33.984540+00:00, run_duration=0.150074, state=success, executor_state=success, try_number=1, max_tries=0, job_id=15, pool=default_pool, queue=default, priority_weight=3, operator=TriggerDagRunOperator, queued_dttm=2024-09-22 20:43:32.223346+00:00, queued_by_job_id=1, pid=337436[0m
+[[34m2024-09-22T23:43:36.709+0300[0m] {[34mdagrun.py:[0m632} ERROR[0m - Marking run <DagRun automated_pipeline_dag @ 2024-09-22 20:40:52.213559+00:00: manual__2024-09-22T20:40:52.213559+00:00, state:running, queued_at: 2024-09-22 20:40:52.231558+00:00. externally triggered: True> failed[0m
+[[34m2024-09-22T23:43:36.709+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=automated_pipeline_dag, execution_date=2024-09-22 20:40:52.213559+00:00, run_id=manual__2024-09-22T20:40:52.213559+00:00, run_start_date=2024-09-22 20:40:53.776498+00:00, run_end_date=2024-09-22 20:43:36.709838+00:00, run_duration=162.93334, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:40:52.213559+00:00, data_interval_end=2024-09-22 20:40:52.213559+00:00, dag_hash=70499393367bea61d01d8947e579f5d1[0m
+[[34m2024-09-22T23:43:36.724+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:43:22.300796+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:43:33.936047+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:43:36.724+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:43:36.724+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG data_prepare_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:43:36.724+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:43:22.300796+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:43:33.936047+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:43:36.726+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task models_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:43:36.726+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task prepare_data_task because previous state change time has not been saved[0m
+[[34m2024-09-22T23:43:36.726+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:43:22.300796+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-09-22T23:43:36.726+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:43:22.300796+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:43:36.727+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:43:33.936047+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-09-22T23:43:36.727+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:43:33.936047+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:43:36.734+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:43:22.300796+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:43:37.399+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:43:37.611+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:37.612+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:43:37.737+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:37.749+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:43:37.750+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:43:22.300796+00:00/task_id=models_pipeline permission to 509
+[[34m2024-09-22T23:43:38.285+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:43:22.300796+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:43:39.082+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:43:33.936047+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:43:39.768+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/dataset_dag.py[0m
+[[34m2024-09-22T23:43:40.005+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:40.007+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:43:40.150+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:43:40.161+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:43:40.161+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=data_prepare_dag/run_id=manual__2024-09-22T20:43:33.936047+00:00/task_id=prepare_data_task permission to 509
+[[34m2024-09-22T23:43:40.628+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:43:33.936047+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:43:51.257+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:43:22.300796+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:43:51.257+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:43:33.936047+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:43:51.261+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=data_prepare_dag, task_id=prepare_data_task, run_id=manual__2024-09-22T20:43:33.936047+00:00, map_index=-1, run_start_date=2024-09-22 20:43:40.676329+00:00, run_end_date=2024-09-22 20:43:50.823925+00:00, run_duration=10.147596, state=success, executor_state=success, try_number=1, max_tries=0, job_id=18, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-09-22 20:43:36.725244+00:00, queued_by_job_id=1, pid=337493[0m
+[[34m2024-09-22T23:43:51.262+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=models_pipeline, run_id=manual__2024-09-22T20:43:22.300796+00:00, map_index=-1, run_start_date=2024-09-22 20:43:38.334580+00:00, run_end_date=2024-09-22 20:43:38.497713+00:00, run_duration=0.163133, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=17, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-09-22 20:43:36.725244+00:00, queued_by_job_id=1, pid=337474[0m
+[[34m2024-09-22T23:43:51.416+0300[0m] {[34mdagrun.py:[0m653} INFO[0m - Marking run <DagRun data_prepare_dag @ 2024-09-22 20:43:33.936047+00:00: manual__2024-09-22T20:43:33.936047+00:00, state:running, queued_at: 2024-09-22 20:43:33.946166+00:00. externally triggered: True> successful[0m
+[[34m2024-09-22T23:43:51.416+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=data_prepare_dag, execution_date=2024-09-22 20:43:33.936047+00:00, run_id=manual__2024-09-22T20:43:33.936047+00:00, run_start_date=2024-09-22 20:43:36.688562+00:00, run_end_date=2024-09-22 20:43:51.416347+00:00, run_duration=14.727785, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:43:33.936047+00:00, data_interval_end=2024-09-22 20:43:33.936047+00:00, dag_hash=be8f8d84ad6eeb3ef1cb202458955e60[0m
+[[34m2024-09-22T23:43:51.420+0300[0m] {[34mdagrun.py:[0m632} ERROR[0m - Marking run <DagRun automated_pipeline_dag @ 2024-09-22 20:43:22.300796+00:00: manual__2024-09-22T20:43:22.300796+00:00, state:running, queued_at: 2024-09-22 20:43:22.309142+00:00. externally triggered: True> failed[0m
+[[34m2024-09-22T23:43:51.421+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=automated_pipeline_dag, execution_date=2024-09-22 20:43:22.300796+00:00, run_id=manual__2024-09-22T20:43:22.300796+00:00, run_start_date=2024-09-22 20:43:32.167559+00:00, run_end_date=2024-09-22 20:43:51.420989+00:00, run_duration=19.25343, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:43:22.300796+00:00, data_interval_end=2024-09-22 20:43:22.300796+00:00, dag_hash=70499393367bea61d01d8947e579f5d1[0m
+[[34m2024-09-22T23:48:05.183+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:48:04.397615+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:48:05.184+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:48:05.184+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:48:04.397615+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:48:05.185+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task datasets_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:48:05.186+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:48:04.397615+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-09-22T23:48:05.187+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:48:04.397615+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:48:05.195+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:48:04.397615+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:48:05.892+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:48:06.119+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:48:06.120+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:48:06.257+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:48:06.268+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:48:06.269+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:48:04.397615+00:00/task_id=datasets_pipeline permission to 509
+[[34m2024-09-22T23:48:06.774+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:48:04.397615+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:48:07.539+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:48:04.397615+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:48:07.552+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=datasets_pipeline, run_id=manual__2024-09-22T20:48:04.397615+00:00, map_index=-1, run_start_date=2024-09-22 20:48:06.835983+00:00, run_end_date=2024-09-22 20:48:07.018504+00:00, run_duration=0.182521, state=success, executor_state=success, try_number=1, max_tries=0, job_id=21, pool=default_pool, queue=default, priority_weight=3, operator=TriggerDagRunOperator, queued_dttm=2024-09-22 20:48:05.184844+00:00, queued_by_job_id=1, pid=338911[0m
+[[34m2024-09-22T23:48:07.741+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:48:04.397615+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:48:06.967914+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:48:07.741+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:48:07.741+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG data_prepare_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:48:07.741+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:48:04.397615+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:48:06.967914+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:48:07.751+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task models_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:48:07.752+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task prepare_data_task because previous state change time has not been saved[0m
+[[34m2024-09-22T23:48:07.752+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:48:04.397615+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-09-22T23:48:07.752+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:48:04.397615+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:48:07.752+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:48:06.967914+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-09-22T23:48:07.752+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:48:06.967914+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:48:07.762+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:48:04.397615+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:48:08.406+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:48:08.623+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:48:08.624+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:48:08.764+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:48:08.775+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:48:08.775+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:48:04.397615+00:00/task_id=models_pipeline permission to 509
+[[34m2024-09-22T23:48:09.227+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:48:04.397615+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:48:09.898+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:48:06.967914+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:48:10.540+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/dataset_dag.py[0m
+[[34m2024-09-22T23:48:10.746+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:48:10.747+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:48:10.885+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:48:10.897+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:48:10.898+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=data_prepare_dag/run_id=manual__2024-09-22T20:48:06.967914+00:00/task_id=prepare_data_task permission to 509
+[[34m2024-09-22T23:48:11.314+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:48:06.967914+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:48:22.233+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:48:04.397615+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:48:22.234+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:48:06.967914+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:48:22.237+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=data_prepare_dag, task_id=prepare_data_task, run_id=manual__2024-09-22T20:48:06.967914+00:00, map_index=-1, run_start_date=2024-09-22 20:48:11.359337+00:00, run_end_date=2024-09-22 20:48:21.793643+00:00, run_duration=10.434306, state=success, executor_state=success, try_number=1, max_tries=0, job_id=23, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-09-22 20:48:07.742156+00:00, queued_by_job_id=1, pid=338976[0m
+[[34m2024-09-22T23:48:22.237+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=models_pipeline, run_id=manual__2024-09-22T20:48:04.397615+00:00, map_index=-1, run_start_date=2024-09-22 20:48:09.270237+00:00, run_end_date=2024-09-22 20:48:09.438182+00:00, run_duration=0.167945, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=22, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-09-22 20:48:07.742156+00:00, queued_by_job_id=1, pid=338956[0m
+[[34m2024-09-22T23:48:31.950+0300[0m] {[34mscheduler_job_runner.py:[0m1605} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-09-22T23:49:00.802+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:48:59.771795+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:49:00.802+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:49:00.803+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:48:59.771795+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:49:00.804+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task datasets_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:49:00.804+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:48:59.771795+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-09-22T23:49:00.804+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:48:59.771795+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:49:00.812+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:48:59.771795+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:49:01.524+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:49:01.774+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:01.775+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:49:01.921+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:01.932+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:49:01.933+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:48:59.771795+00:00/task_id=datasets_pipeline permission to 509
+[[34m2024-09-22T23:49:02.513+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:48:59.771795+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:49:03.254+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:48:59.771795+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:49:03.257+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=datasets_pipeline, run_id=manual__2024-09-22T20:48:59.771795+00:00, map_index=-1, run_start_date=2024-09-22 20:49:02.559296+00:00, run_end_date=2024-09-22 20:49:02.734157+00:00, run_duration=0.174861, state=success, executor_state=success, try_number=1, max_tries=0, job_id=24, pool=default_pool, queue=default, priority_weight=3, operator=TriggerDagRunOperator, queued_dttm=2024-09-22 20:49:00.803505+00:00, queued_by_job_id=1, pid=339428[0m
+[[34m2024-09-22T23:49:03.423+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:48:59.771795+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:49:02.680215+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:49:03.424+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:49:03.424+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG data_prepare_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:49:03.424+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:48:59.771795+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:49:02.680215+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:49:03.425+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task models_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:49:03.425+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task prepare_data_task because previous state change time has not been saved[0m
+[[34m2024-09-22T23:49:03.425+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:48:59.771795+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-09-22T23:49:03.426+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:48:59.771795+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:49:03.426+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:49:02.680215+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-09-22T23:49:03.426+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:49:02.680215+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:49:03.434+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:48:59.771795+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:49:04.096+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:49:04.322+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:04.323+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:49:04.461+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:04.474+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:49:04.474+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:48:59.771795+00:00/task_id=models_pipeline permission to 509
+[[34m2024-09-22T23:49:04.935+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:48:59.771795+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:49:05.628+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:49:02.680215+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:49:06.289+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/dataset_dag.py[0m
+[[34m2024-09-22T23:49:06.536+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:06.538+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:49:06.694+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:06.706+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:49:06.707+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=data_prepare_dag/run_id=manual__2024-09-22T20:49:02.680215+00:00/task_id=prepare_data_task permission to 509
+[[34m2024-09-22T23:49:07.126+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:49:02.680215+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:49:24.980+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:48:59.771795+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:49:24.980+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:49:02.680215+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:49:24.984+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=data_prepare_dag, task_id=prepare_data_task, run_id=manual__2024-09-22T20:49:02.680215+00:00, map_index=-1, run_start_date=2024-09-22 20:49:07.175845+00:00, run_end_date=2024-09-22 20:49:24.503383+00:00, run_duration=17.327538, state=success, executor_state=success, try_number=1, max_tries=0, job_id=26, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-09-22 20:49:03.424555+00:00, queued_by_job_id=1, pid=339514[0m
+[[34m2024-09-22T23:49:24.985+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=models_pipeline, run_id=manual__2024-09-22T20:48:59.771795+00:00, map_index=-1, run_start_date=2024-09-22 20:49:04.982686+00:00, run_end_date=2024-09-22 20:49:05.134245+00:00, run_duration=0.151559, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=25, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-09-22 20:49:03.424555+00:00, queued_by_job_id=1, pid=339464[0m
+[[34m2024-09-22T23:49:25.178+0300[0m] {[34mdagrun.py:[0m653} INFO[0m - Marking run <DagRun data_prepare_dag @ 2024-09-22 20:49:02.680215+00:00: manual__2024-09-22T20:49:02.680215+00:00, state:running, queued_at: 2024-09-22 20:49:02.695477+00:00. externally triggered: True> successful[0m
+[[34m2024-09-22T23:49:25.178+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=data_prepare_dag, execution_date=2024-09-22 20:49:02.680215+00:00, run_id=manual__2024-09-22T20:49:02.680215+00:00, run_start_date=2024-09-22 20:49:03.392186+00:00, run_end_date=2024-09-22 20:49:25.178857+00:00, run_duration=21.786671, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:49:02.680215+00:00, data_interval_end=2024-09-22 20:49:02.680215+00:00, dag_hash=be8f8d84ad6eeb3ef1cb202458955e60[0m
+[[34m2024-09-22T23:49:25.201+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 2 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:49:19.999511+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:49:24.885207+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:49:25.201+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:49:25.201+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG data_prepare_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:49:25.201+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:49:19.999511+00:00 [scheduled]>
+	<TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:49:24.885207+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:49:25.203+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task models_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:49:25.203+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task prepare_data_task because previous state change time has not been saved[0m
+[[34m2024-09-22T23:49:25.204+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:49:19.999511+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-09-22T23:49:25.204+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:49:19.999511+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:49:25.204+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:49:24.885207+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-09-22T23:49:25.205+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:49:24.885207+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:49:25.212+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:49:19.999511+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:49:25.960+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:49:26.182+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:26.183+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:49:26.324+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:26.338+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:49:26.338+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:49:19.999511+00:00/task_id=models_pipeline permission to 509
+[[34m2024-09-22T23:49:26.810+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:49:19.999511+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:49:27.536+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_prepare_dag', 'prepare_data_task', 'manual__2024-09-22T20:49:24.885207+00:00', '--local', '--subdir', 'DAGS_FOLDER/dataset_dag.py'][0m
+[[34m2024-09-22T23:49:28.184+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/dataset_dag.py[0m
+[[34m2024-09-22T23:49:28.405+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:28.407+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:49:28.546+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:49:28.557+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:49:28.558+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=data_prepare_dag/run_id=manual__2024-09-22T20:49:24.885207+00:00/task_id=prepare_data_task permission to 509
+[[34m2024-09-22T23:49:28.988+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: data_prepare_dag.prepare_data_task manual__2024-09-22T20:49:24.885207+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:49:40.051+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:49:19.999511+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:49:40.051+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_prepare_dag', task_id='prepare_data_task', run_id='manual__2024-09-22T20:49:24.885207+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:49:40.054+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=data_prepare_dag, task_id=prepare_data_task, run_id=manual__2024-09-22T20:49:24.885207+00:00, map_index=-1, run_start_date=2024-09-22 20:49:29.036459+00:00, run_end_date=2024-09-22 20:49:39.545757+00:00, run_duration=10.509298, state=success, executor_state=success, try_number=1, max_tries=0, job_id=29, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2024-09-22 20:49:25.202517+00:00, queued_by_job_id=1, pid=339883[0m
+[[34m2024-09-22T23:49:40.055+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=models_pipeline, run_id=manual__2024-09-22T20:49:19.999511+00:00, map_index=-1, run_start_date=2024-09-22 20:49:26.867403+00:00, run_end_date=2024-09-22 20:49:27.039610+00:00, run_duration=0.172207, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=28, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-09-22 20:49:25.202517+00:00, queued_by_job_id=1, pid=339833[0m
+[[34m2024-09-22T23:49:40.219+0300[0m] {[34mdagrun.py:[0m653} INFO[0m - Marking run <DagRun data_prepare_dag @ 2024-09-22 20:49:24.885207+00:00: manual__2024-09-22T20:49:24.885207+00:00, state:running, queued_at: 2024-09-22 20:49:24.894597+00:00. externally triggered: True> successful[0m
+[[34m2024-09-22T23:49:40.219+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=data_prepare_dag, execution_date=2024-09-22 20:49:24.885207+00:00, run_id=manual__2024-09-22T20:49:24.885207+00:00, run_start_date=2024-09-22 20:49:25.157274+00:00, run_end_date=2024-09-22 20:49:40.219938+00:00, run_duration=15.062664, state=success, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:49:24.885207+00:00, data_interval_end=2024-09-22 20:49:24.885207+00:00, dag_hash=be8f8d84ad6eeb3ef1cb202458955e60[0m
+[[34m2024-09-22T23:51:12.405+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:51:11.279363+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:51:12.406+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:51:12.406+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:51:11.279363+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:51:12.407+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task datasets_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:51:12.407+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:51:11.279363+00:00', try_number=1, map_index=-1) to executor with priority 3 and queue default[0m
+[[34m2024-09-22T23:51:12.407+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:51:11.279363+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:51:12.413+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'datasets_pipeline', 'manual__2024-09-22T20:51:11.279363+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:51:13.168+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:51:13.416+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:51:13.417+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:51:13.576+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:51:13.589+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:51:13.590+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:51:11.279363+00:00/task_id=datasets_pipeline permission to 509
+[[34m2024-09-22T23:51:14.109+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.datasets_pipeline manual__2024-09-22T20:51:11.279363+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:51:14.840+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='datasets_pipeline', run_id='manual__2024-09-22T20:51:11.279363+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:51:14.843+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=datasets_pipeline, run_id=manual__2024-09-22T20:51:11.279363+00:00, map_index=-1, run_start_date=2024-09-22 20:51:14.169105+00:00, run_end_date=2024-09-22 20:51:14.357174+00:00, run_duration=0.188069, state=success, executor_state=success, try_number=1, max_tries=0, job_id=30, pool=default_pool, queue=default, priority_weight=3, operator=TriggerDagRunOperator, queued_dttm=2024-09-22 20:51:12.406555+00:00, queued_by_job_id=1, pid=340422[0m
+[[34m2024-09-22T23:51:15.006+0300[0m] {[34mscheduler_job_runner.py:[0m413} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:51:11.279363+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:51:15.006+0300[0m] {[34mscheduler_job_runner.py:[0m476} INFO[0m - DAG automated_pipeline_dag has 0/16 running and queued tasks[0m
+[[34m2024-09-22T23:51:15.006+0300[0m] {[34mscheduler_job_runner.py:[0m592} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:51:11.279363+00:00 [scheduled]>[0m
+[[34m2024-09-22T23:51:15.007+0300[0m] {[34mtaskinstance.py:[0m1441} WARNING[0m - cannot record scheduled_duration for task models_pipeline because previous state change time has not been saved[0m
+[[34m2024-09-22T23:51:15.007+0300[0m] {[34mscheduler_job_runner.py:[0m635} INFO[0m - Sending TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:51:11.279363+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default[0m
+[[34m2024-09-22T23:51:15.008+0300[0m] {[34mbase_executor.py:[0m146} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:51:11.279363+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:51:15.015+0300[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'automated_pipeline_dag', 'models_pipeline', 'manual__2024-09-22T20:51:11.279363+00:00', '--local', '--subdir', 'DAGS_FOLDER/automated_pipeline_dag.py'][0m
+[[34m2024-09-22T23:51:15.706+0300[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /home/zaurall/projects/pmldl-mlops/services/airflow/dags/automated_pipeline_dag.py[0m
+[[34m2024-09-22T23:51:15.954+0300[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:51:15.955+0300[0m] {[34mexample_kubernetes_executor.py:[0m38} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-09-22T23:51:16.119+0300[0m] {[34mexample_python_operator.py:[0m86} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-09-22T23:51:16.133+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m39} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 37, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-09-22T23:51:16.134+0300[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+Changing /home/zaurall/projects/pmldl-mlops/services/airflow/logs/dag_id=automated_pipeline_dag/run_id=manual__2024-09-22T20:51:11.279363+00:00/task_id=models_pipeline permission to 509
+[[34m2024-09-22T23:51:16.728+0300[0m] {[34mtask_command.py:[0m416} INFO[0m - Running <TaskInstance: automated_pipeline_dag.models_pipeline manual__2024-09-22T20:51:11.279363+00:00 [queued]> on host DESKTOP-QAR5BLG.[0m
+[[34m2024-09-22T23:51:17.528+0300[0m] {[34mscheduler_job_runner.py:[0m685} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='automated_pipeline_dag', task_id='models_pipeline', run_id='manual__2024-09-22T20:51:11.279363+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-09-22T23:51:17.533+0300[0m] {[34mscheduler_job_runner.py:[0m722} INFO[0m - TaskInstance Finished: dag_id=automated_pipeline_dag, task_id=models_pipeline, run_id=manual__2024-09-22T20:51:11.279363+00:00, map_index=-1, run_start_date=2024-09-22 20:51:16.789192+00:00, run_end_date=2024-09-22 20:51:16.963078+00:00, run_duration=0.173886, state=failed, executor_state=success, try_number=1, max_tries=0, job_id=31, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2024-09-22 20:51:15.006871+00:00, queued_by_job_id=1, pid=340504[0m
+[[34m2024-09-22T23:51:17.672+0300[0m] {[34mdagrun.py:[0m632} ERROR[0m - Marking run <DagRun automated_pipeline_dag @ 2024-09-22 20:51:11.279363+00:00: manual__2024-09-22T20:51:11.279363+00:00, state:running, queued_at: 2024-09-22 20:51:11.289554+00:00. externally triggered: True> failed[0m
+[[34m2024-09-22T23:51:17.673+0300[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=automated_pipeline_dag, execution_date=2024-09-22 20:51:11.279363+00:00, run_id=manual__2024-09-22T20:51:11.279363+00:00, run_start_date=2024-09-22 20:51:12.375338+00:00, run_end_date=2024-09-22 20:51:17.673191+00:00, run_duration=5.297853, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-09-22 20:51:11.279363+00:00, data_interval_end=2024-09-22 20:51:11.279363+00:00, dag_hash=71a9897975c4c6446916d64f2dd5e6b3[0m
+[[34m2024-09-22T23:53:32.090+0300[0m] {[34mscheduler_job_runner.py:[0m1605} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-09-22T23:58:32.115+0300[0m] {[34mscheduler_job_runner.py:[0m1605} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-09-23T00:01:15.553+0300[0m] {[34mscheduler_job_runner.py:[0m861} ERROR[0m - Exception when executing SchedulerJob._run_scheduler_loop[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1880, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 733, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: job.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 844, in _execute
+    self._run_scheduler_loop()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 985, in _run_scheduler_loop
+    perform_heartbeat(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 350, in perform_heartbeat
+    job.heartbeat(heartbeat_callback=heartbeat_callback, session=session)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 211, in heartbeat
+    session.commit()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3386, in flush
+    self._flush(objects)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3525, in _flush
+    with util.safe_reraise():
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3486, in _flush
+    flush_context.execute()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1097, in _emit_insert_statements
+    c = connection._execute_20(
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1880, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 733, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: job.id
+[SQL: INSERT INTO job (id, dag_id, state, job_type, start_date, end_date, latest_heartbeat, executor_class, hostname, unixname) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ((1, None, <JobState.RUNNING: 'running'>, 'SchedulerJob', '2024-09-21 20:22:35.790771', None, '2024-09-22 21:01:08.837141', None, 'DESKTOP-QAR5BLG.', 'zaurall'), (1, None, <JobState.RUNNING: 'running'>, 'SchedulerJob', '2024-09-21 20:22:35.790771', None, '2024-09-22 21:01:08.837141', None, 'DESKTOP-QAR5BLG.', 'zaurall'))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)[0m
+[[34m2024-09-23T00:01:16.565+0300[0m] {[34mprocess_utils.py:[0m131} INFO[0m - Sending 15 to group 337417. PIDs of all processes in the group: [337417][0m
+[[34m2024-09-23T00:01:16.565+0300[0m] {[34mprocess_utils.py:[0m86} INFO[0m - Sending the signal 15 to group 337417[0m
+[[34m2024-09-23T00:01:16.658+0300[0m] {[34mprocess_utils.py:[0m79} INFO[0m - Process psutil.Process(pid=337417, status='terminated', exitcode=0, started='23:43:31') (337417) terminated with exit code 0[0m
+[[34m2024-09-23T00:01:16.659+0300[0m] {[34mscheduler_job_runner.py:[0m873} INFO[0m - Exited execute loop[0m
+[[34m2024-09-23T00:01:16.671+0300[0m] {[34mscheduler_command.py:[0m49} ERROR[0m - Exception when running scheduler job[0m
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1880, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 733, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: job.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/cli/commands/scheduler_command.py", line 47, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 289, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 318, in execute_job
+    ret = execute_callable()
+          ^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 844, in _execute
+    self._run_scheduler_loop()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/scheduler_job_runner.py", line 985, in _run_scheduler_loop
+    perform_heartbeat(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 350, in perform_heartbeat
+    job.heartbeat(heartbeat_callback=heartbeat_callback, session=session)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/airflow/jobs/job.py", line 211, in heartbeat
+    session.commit()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1451, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3386, in flush
+    self._flush(objects)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3525, in _flush
+    with util.safe_reraise():
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 3486, in _flush
+    flush_context.execute()
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    _emit_insert_statements(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1097, in _emit_insert_statements
+    c = connection._execute_20(
+        ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1880, in _execute_context
+    self.dialect.do_executemany(
+  File "/home/zaurall/projects/pmldl-mlops/.venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 733, in do_executemany
+    cursor.executemany(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: job.id
+[SQL: INSERT INTO job (id, dag_id, state, job_type, start_date, end_date, latest_heartbeat, executor_class, hostname, unixname) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ((1, None, <JobState.RUNNING: 'running'>, 'SchedulerJob', '2024-09-21 20:22:35.790771', None, '2024-09-22 21:01:08.837141', None, 'DESKTOP-QAR5BLG.', 'zaurall'), (1, None, <JobState.RUNNING: 'running'>, 'SchedulerJob', '2024-09-21 20:22:35.790771', None, '2024-09-22 21:01:08.837141', None, 'DESKTOP-QAR5BLG.', 'zaurall'))]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)[0m

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  model-api:
+    build:
+      context: ./api
+    ports:
+      - "6000:6000"
+  streamlit-app:
+    build:
+      context: ./app
+    ports:
+      - "8501:8501"
+    depends_on:
+      - model-api

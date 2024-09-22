@@ -1,9 +1,15 @@
+fastapi
+uvicorn
+joblib
+streamlit
+requests
 hydra-core
 dvc
 pytest
 great_expectations
 pandas
 scikit-learn
+scipy
 seaborn
 matplotlib
 jupyter
