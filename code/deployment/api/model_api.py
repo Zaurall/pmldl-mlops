@@ -7,14 +7,6 @@ model = joblib.load('model.pkl')
 
 class PredictionRequest(BaseModel):
     features: list
-    
-# def preprocess(features):
-#     transformed_data, _ = stats.boxcox(test_df["crime_rate"])
-#     test_df["crime_rate"] = transformed_data
-#     train_df['Average'] = train_df[['dist1', 'dist2', 'dist3', 'dist4']].mean(axis=1)
-#     (OneHotEncoder(drop='first'), categorical_columns)
-#     StandardScaler()
-#     train_df.drop(['price'], axis=1)
 
 @app.post('/predict')
 def predict(request: PredictionRequest):
